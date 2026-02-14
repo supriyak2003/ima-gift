@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For ima 💖</title>
+<style>
+body {
+    background: linear-gradient(#ff9aa2, #ffb7b2, #ffdac1);
+    font-family: "Comic Sans MS", cursive;
+    text-align: center;
+    color: #800040;
+    overflow-x: hidden;
+}
+
+/* Falling hearts */
+.heart {
+    position: fixed;
+    top: -10px;
+    color: red;
+    font-size: 20px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+h1 {
+    font-size: 45px;
+    margin-top: 20px;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 25px;
+    box-shadow: 0 0 15px pink;
+    margin: 20px auto;
+    width: 80%;
+}
+
+img {
+    width: 200px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+button {
+    background: hotpink;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: deeppink;
+}
+
+footer {
+    font-size: 20px;
+    margin: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<audio id="bgm" loop>
+  <source src="song.mpeg" type="audio/mpeg">
+</audio>
+
+<script>
+document.addEventListener("click", function () {
+  document.getElementById("bgm").play();
+});
+</script>
+
+<p>Tap anywhere… this song is for you 💕</p>
+
+<h1>💖 For My Best Friend Ima 💖</h1>
+
+<div class="box">
+<h2>From .... 💕</h2>
+<p>This page is for u, bcz you deserve to know how special u r to me.</p>
+<p>You understand my heart even when I don’t speak.</p>
+<p>No matter how far we go, my heart will always recognize yours.</p>
+<p>No matter what happens, my heart will always choose U.</p>
+</div>
+
+<div class="box">
+<h2>🌸 Why You Are My Favorite Person 🌸</h2>
+<p>• Your smile is my favorite notification</p>
+<p>• Your voice is my comfort</p>
+<p>• I don’t say this enough, but I’m really grateful for U</p>
+<p>• You matter to me. A lot.</p>
+<p>• You are the person I pray for when I talk to God.</p>
+</div>
+
+<div class="box">
+<h2>📸 Our Memories Together</h2>
+<img src="ima4.jpg">
+<img src="ima2.jpg">
+<img src="ima3.jpg">
+<img src="ima1.jpg">
+</div>
+
+<div class="box">
+<h2>💌 My Promise To You</h2>
+<p>I promise to stay with u in every situation.</p>
+<p>I promise to protect u like my OWN & u are my person. .</p>
+<p>I promise u will never walk alone.</p>
+<p>Even in another life, I will choose u again.</p>
+</div>
+
+<button onclick="showLove()">Click for a Surprise 💝</button>
+
+<footer>
+💞 Made with endless love by Supriya for Ima 💞
+</footer>
+
+<script>
+// Popup message
+function showLove() {
+    alert("Ima, u are my heart, my soul, and my forever best friend 💖 Love u always!");
+}
+
+// Falling hearts effect
+setInterval(() => {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = "💖";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 10 + "px";
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 5000);
+}, 300);
+</script>
+
+</body>
+</html>
